@@ -1,12 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // components
-import HouseForm from "./components/HouseForm";
-import Signup from "./components/Signup";
+import Signup from "./components/auth/Signup";
 import Protected from "./components/Protected";
 import NavBar from "./components/navbar/NavBar";
-import Login from "./components/Login";
+import Login from "./components/auth/Login";
 import HouseList from "./components/HouseList";
+import Forms from "./components/forms/Forms";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <NavBar>
-          <HouseForm></HouseForm>,
+          <Forms></Forms>,
         </NavBar>
       </Protected>
     ),
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     element: (
       <Protected>
         <NavBar>
-          <HouseForm />
+          <Forms />
         </NavBar>
       </Protected>
     ),

@@ -1,6 +1,5 @@
 import { message } from "antd";
 import axios from "axios";
-// getting token
 
 const token = localStorage.getItem("token");
 
@@ -27,7 +26,6 @@ export const handleApiError = (error) => {
 };
 
 export const login = async ({ email, password }) => {
-  console.log("login: ", email, password);
   try {
     const response = await api.post("/auth/login", { email, password });
     return response;
@@ -37,7 +35,6 @@ export const login = async ({ email, password }) => {
 };
 
 export const signup = async (data) => {
-  console.log("signup: ", data);
   try {
     const response = await api.post("/auth/signup", data);
     return response;
@@ -47,7 +44,6 @@ export const signup = async (data) => {
 };
 
 export const getHouse = async (props) => {
-  console.log("getHouse: ", props);
   const { wing, houseNumber, userId } = props;
 
   try {
@@ -71,8 +67,6 @@ export const getAllHouses = async () => {
 };
 
 export const updateHouse = async (props) => {
-  console.log("updateHouse: ", props);
-
   const { data, wing, houseNumber, userId } = props;
 
   try {
@@ -88,8 +82,6 @@ export const updateHouse = async (props) => {
 };
 
 export const deleteHouse = async (props) => {
-  console.log("deleteHouse: ", props);
-
   const { wing, houseNumber, userId } = props;
 
   try {
@@ -104,8 +96,6 @@ export const deleteHouse = async (props) => {
 };
 
 export const createHouse = async (props) => {
-  console.log("createHouse: ", props);
-
   const { data, wing, houseNumber, userId } = props;
 
   try {

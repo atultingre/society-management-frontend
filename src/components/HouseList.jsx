@@ -11,7 +11,6 @@ const HouseList = () => {
   const [searchInput, setSearchInput] = useState("");
   const [open, setOpen] = useState(false);
   const [selectedHouse, setSelectedHouse] = useState();
-  console.log("isAdmin: ", isAdmin);
 
   useEffect(() => {
     const fetchHouses = async () => {
